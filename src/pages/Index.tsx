@@ -1,13 +1,22 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import FloatingHearts from "@/components/FloatingHearts";
+import IntroScreen from "@/components/IntroScreen";
+import BirthdayWish from "@/components/BirthdayWish";
+import PhotoGallery from "@/components/PhotoGallery";
+import OurStory from "@/components/OurStory";
+import EmotionalPause from "@/components/EmotionalPause";
+import ClosingLetter from "@/components/ClosingLetter";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="relative">
+      <FloatingHearts />
+      <IntroScreen />
+      <BirthdayWish />
+      <PhotoGallery />
+      <OurStory />
+      <EmotionalPause />
+      <ClosingLetter />
+    </main>
   );
 };
 
