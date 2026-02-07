@@ -6,18 +6,24 @@ interface Heart {
   size: number;
   duration: number;
   delay: number;
+  emoji: string;
+  drift: number;
 }
+
+const emojis = ["♥", "💛", "💗", "✨", "💕", "🤍", "♥", "💗"];
 
 const FloatingHearts = () => {
   const [hearts, setHearts] = useState<Heart[]>([]);
 
   useEffect(() => {
-    const generated: Heart[] = Array.from({ length: 12 }, (_, i) => ({
+    const generated: Heart[] = Array.from({ length: 20 }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
-      size: 10 + Math.random() * 14,
-      duration: 8 + Math.random() * 12,
-      delay: Math.random() * 10,
+      size: 18 + Math.random() * 22,
+      duration: 10 + Math.random() * 14,
+      delay: Math.random() * 12,
+      emoji: emojis[i % emojis.length],
+      drift: -30 + Math.random() * 60,
     }));
     setHearts(generated);
   }, []);
@@ -27,17 +33,18 @@ const FloatingHearts = () => {
       {hearts.map((h) => (
         <span
           key={h.id}
-          className="absolute animate-float-up text-warm-blush-light"
+          className="absolute animate-float-up"
           style={{
             left: `${h.left}%`,
-            bottom: "-20px",
+            bottom: "-40px",
             fontSize: `${h.size}px`,
             animationDuration: `${h.duration}s`,
             animationDelay: `${h.delay}s`,
             animationIterationCount: "infinite",
+            ["--drift" as string]: `${h.drift}px`,
           }}
         >
-          ♥
+          {h.emoji}
         </span>
       ))}
     </div>

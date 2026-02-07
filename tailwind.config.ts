@@ -55,6 +55,8 @@ export default {
           "gold-light": "hsl(var(--gold-light))",
           rose: "hsl(var(--rose-mist))",
           parchment: "hsl(var(--parchment))",
+          lavender: "hsl(var(--lavender))",
+          peach: "hsl(var(--peach))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

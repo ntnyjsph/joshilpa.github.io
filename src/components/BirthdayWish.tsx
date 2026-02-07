@@ -21,11 +21,11 @@ const BirthdayWish = () => {
         </motion.span>
 
         <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 40, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="font-handwritten text-6xl md:text-8xl lg:text-9xl text-gradient-warm leading-tight"
+          transition={{ duration: 1.6, delay: 0.5, ease: "easeOut" }}
+          className="font-handwritten text-7xl md:text-9xl lg:text-[10rem] text-gradient-warm text-glow leading-tight"
         >
           Happy Birthday
         </motion.h1>
@@ -35,7 +35,7 @@ const BirthdayWish = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="font-serif text-xl md:text-2xl text-foreground mt-8 max-w-md mx-auto leading-relaxed"
+          className="font-serif text-xl md:text-2xl text-foreground mt-10 max-w-md mx-auto leading-relaxed text-glow-soft"
         >
           To the most beautiful soul I know.
           <br />
