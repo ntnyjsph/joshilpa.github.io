@@ -44,6 +44,9 @@
     --gold-light: 38 60% 80%;
     --rose-mist: 340 40% 90%;
     --parchment: 38 40% 92%;
+    --lavender: 270 40% 85%;
+    --peach: 20 70% 85%;
+    --glow-pink: 340 80% 75%;
 
     --font-handwritten: 'Caveat', cursive;
     --font-serif: 'Cormorant Garamond', serif;
@@ -86,7 +89,15 @@
 
   .text-gradient-warm {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--blush)), hsl(var(--gold)));
+    background-image: linear-gradient(135deg, hsl(var(--blush)), hsl(var(--peach)), hsl(var(--gold)));
+  }
+
+  .text-glow {
+    text-shadow: 0 0 30px hsl(var(--glow-pink) / 0.4), 0 0 60px hsl(var(--glow-pink) / 0.15);
+  }
+
+  .text-glow-soft {
+    text-shadow: 0 0 20px hsl(var(--glow-pink) / 0.25), 0 2px 8px hsl(var(--blush) / 0.1);
   }
 
   .bg-gradient-warm {
@@ -113,17 +124,20 @@
 /* Floating hearts animation */
 @keyframes float-up {
   0% {
-    transform: translateY(0) translateX(0) scale(1);
+    transform: translateY(0) translateX(0) scale(1) rotate(0deg);
     opacity: 0;
   }
-  10% {
-    opacity: 0.6;
+  8% {
+    opacity: 0.7;
   }
-  90% {
+  50% {
+    opacity: 0.5;
+  }
+  85% {
     opacity: 0.3;
   }
   100% {
-    transform: translateY(-100vh) translateX(30px) scale(0.5);
+    transform: translateY(-105vh) translateX(var(--drift, 20px)) scale(0.4) rotate(15deg);
     opacity: 0;
   }
 }

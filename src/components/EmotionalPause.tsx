@@ -4,21 +4,21 @@ const EmotionalPause = () => {
   return (
     <section className="min-h-[60vh] flex items-center justify-center bg-gradient-warm relative overflow-hidden">
       {/* Soft floating elements */}
-      {[...Array(6)].map((_, i) => (
+      {[...Array(8)].map((_, i) => (
         <motion.span
           key={i}
-          className="absolute text-warm-blush-light animate-pulse-soft"
+          className="absolute animate-pulse-soft"
           style={{
-            left: `${15 + i * 14}%`,
-            top: `${20 + (i % 3) * 25}%`,
-            fontSize: `${14 + i * 4}px`,
+            left: `${10 + i * 12}%`,
+            top: `${15 + (i % 3) * 28}%`,
+            fontSize: `${18 + i * 4}px`,
           }}
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 0.5 }}
+          whileInView={{ opacity: 0.65 }}
           viewport={{ once: true }}
           transition={{ duration: 1.5, delay: i * 0.3 }}
         >
-          {i % 2 === 0 ? "♥" : "✦"}
+          {["💗", "✨", "🤍", "💛", "✦", "💕", "♥", "✨"][i]}
         </motion.span>
       ))}
 

@@ -41,8 +41,8 @@ const ClosingLetter = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 + i * 0.08 }}
-              className={`font-handwritten text-xl md:text-2xl text-foreground leading-relaxed ${
+              transition={{ duration: 0.9, delay: 0.2 + i * 0.12 }}
+              className={`font-handwritten text-xl md:text-2xl text-foreground leading-relaxed text-glow-soft ${
                 line === "" ? "h-4" : ""
               } ${i === 0 ? "text-2xl md:text-3xl" : ""} ${
                 i === letterLines.length - 1 ? "pt-4 text-right" : ""
