@@ -1,14 +1,12 @@
 import { motion } from "framer-motion";
 
 const storyLines = [
-  "Do you remember that first evening?",
-  "We sat on that old bench, talking about everything and nothing.",
-  "The world felt so quiet around us…",
-  "like it was giving us space to just be.",
-  "You laughed at something silly I said,",
-  "and I knew right then — I was home.",
-  "Every day since, you've been my favorite story.",
-  "And I never want it to end. 💛",
+  "It started in a gaming app—",
+  "no voice chat or \"Join Room\" request could have prepared me",
+  "for the fact that I was meeting my Forever.",
+  "Back then, you were just a teammate;",
+  "little did I know you'd end up being",
+  "the \"Final Boss\" of my heart. 💛",
 ];
 
 const OurStory = () => {
